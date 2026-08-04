@@ -1,7 +1,7 @@
 # MeshCore firmware for the Seeed SenseCAP MeshTracker X1
 
 Prebuilt [MeshCore](https://meshcore.co.uk) firmware for the **Seeed SenseCAP MeshTracker X1**
-(nRF52840 + Semtech LR2021 + dual-band L1/L5 GNSS) — the card tracker that ships with Meshtastic.
+(nRF52840 + Semtech LR2021 + dual-band L1/L5 GNSS). This is the card tracker that ships with Meshtastic.
 
 These builds come from the port submitted upstream in
 [meshcore-dev/MeshCore#3112](https://github.com/meshcore-dev/MeshCore/pull/3112)
@@ -16,7 +16,7 @@ battery sensing (4.30 V full on the X1's high-voltage cell).
 
 | File | Use case |
 |------|----------|
-| [`MeshCore_MeshTracker_X1_companion_radio_ble.uf2`](firmware/MeshCore_MeshTracker_X1_companion_radio_ble.uf2) | **Most people want this** — pairs with the MeshCore phone app over Bluetooth. Pairing PIN: `123456` |
+| [`MeshCore_MeshTracker_X1_companion_radio_ble.uf2`](firmware/MeshCore_MeshTracker_X1_companion_radio_ble.uf2) | **Most people want this.** Pairs with the MeshCore phone app over Bluetooth. Pairing PIN: `123456` |
 | [`MeshCore_MeshTracker_X1_companion_radio_usb.uf2`](firmware/MeshCore_MeshTracker_X1_companion_radio_usb.uf2) | Companion over USB serial instead of BLE |
 | [`MeshCore_MeshTracker_X1_repeater.uf2`](firmware/MeshCore_MeshTracker_X1_repeater.uf2) | Standalone repeater (default admin password: `password`) |
 | [`MeshCore_MeshTracker_X1_room_server.uf2`](firmware/MeshCore_MeshTracker_X1_room_server.uf2) | Room/BBS server (default room password: `hello`) |
@@ -36,7 +36,7 @@ Going back to Meshtastic works the same way: enter DFU mode and flash a Meshtast
 
 ## After flashing
 
-- **Set your region's radio preset** in the MeshCore app — builds default to
+- **Set your region's radio preset** in the MeshCore app. Builds default to
   869.618 MHz / BW 62.5 / SF 8 (EU). US meshes typically use 910.525 MHz / BW 250 / SF 10.
 - **GPS is off by default** (saves battery). Enable it in the app: node settings →
   sensor settings → set `gps` to `1`. First fix needs sky view and may take a minute
@@ -45,5 +45,5 @@ Going back to Meshtastic works the same way: enter DFU mode and flash a Meshtast
 
 ## Disclaimer
 
-Community build, provided as-is — not affiliated with Seeed Studio or the MeshCore team.
+Community build, provided as-is. Not affiliated with Seeed Studio or the MeshCore team.
 Flash at your own risk. Firmware is MIT-licensed like MeshCore itself (see [LICENSE](LICENSE)).
