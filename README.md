@@ -3,14 +3,28 @@
 Prebuilt [MeshCore](https://meshcore.co.uk) firmware for the **Seeed SenseCAP MeshTracker X1**
 (nRF52840 + Semtech LR2021 + dual-band L1/L5 GNSS). This is the card tracker that ships with Meshtastic.
 
-These builds come from the port submitted upstream in
-[meshcore-dev/MeshCore#3112](https://github.com/meshcore-dev/MeshCore/pull/3112)
-(source branch: [`Hacuchino-hash/MeshCore@add-meshtracker-x1`](https://github.com/Hacuchino-hash/MeshCore/tree/add-meshtracker-x1)),
-built against MeshCore master `03b6ef4` with RadioLib 7.7.1.
+X1 support is now merged into official MeshCore
+([meshcore-dev/MeshCore#3112](https://github.com/meshcore-dev/MeshCore/pull/3112)).
+These builds are the full X1 feature set: current MeshCore dev (`9b4a591`, 2026-08-06)
+plus the follow up features from
+[meshcore-dev/MeshCore#3122](https://github.com/meshcore-dev/MeshCore/pull/3122)
+(source branch: [`Hacuchino-hash/MeshCore@x1-notifications`](https://github.com/Hacuchino-hash/MeshCore/tree/x1-notifications)).
+Use these until the next official MeshCore release ships with the X1 built in.
 
-**Verified on real hardware:** boots, BLE pairing with the MeshCore app, two-way
-over-the-air messaging with other MeshCore nodes (delivery ACKs), GPS fix, and
-battery sensing (4.30 V full on the X1's high-voltage cell).
+**On top of stock companion firmware:**
+
+* Color coded status blinks: green heartbeat, blue when the app is connected, amber
+  when messages are waiting, red on low battery, plus a short rainbow sweep on boot
+  and on message arrival
+* Vibration on incoming messages, whether or not the app is connected
+* Triple press cycles alert modes: Buzz+Vibe, Buzz only, Vibe only, Silent. Each mode
+  confirms by tone and/or vibration, and the setting persists across reboots
+* SPA06 barometer reported through telemetry (temperature and pressure in the app)
+* Charge status on the LED while docked: amber breathing while charging, dim green when full
+
+**All features are hardware verified on a real X1:** boot, BLE pairing, two-way
+over-the-air messaging with delivery ACKs, GPS fix, battery sensing, notifications,
+haptics and charge display.
 
 ## Which file do I flash?
 
