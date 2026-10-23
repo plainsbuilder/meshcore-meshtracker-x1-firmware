@@ -8,7 +8,7 @@ X1 support is now merged into official MeshCore
 These builds are the full X1 feature set: current MeshCore dev (`9b4a591`, 2026-08-06)
 plus the follow up features from
 [meshcore-dev/MeshCore#3122](https://github.com/meshcore-dev/MeshCore/pull/3122)
-(source branch: [`nodakmesh-dev/MeshCore@x1-notifications`](https://github.com/nodakmesh-dev/MeshCore/tree/x1-notifications)).
+(source branch: [`plainsbuilder/MeshCore@x1-notifications`](https://github.com/plainsbuilder/MeshCore/tree/x1-notifications)).
 Use these until the next official MeshCore release ships with the X1 built in.
 
 **On top of stock companion firmware:**
